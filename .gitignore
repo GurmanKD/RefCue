@@ -1,0 +1,37 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# ---- Virtual Environment ----
+.venv/
+venv/
+ENV/
+
+# ---- Environment files ----
+.env
+.env.*
+
+# ---- OAuth / Secrets ----
+credentials.json
+token.json
+
+# ---- Databases ----
+*.db
+*.sqlite3
+
+# ---- Logs ----
+*.log
+
+# ---- IDE ----
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# ---- Build artifacts ----
+build/
+dist/
+*.egg-info/
