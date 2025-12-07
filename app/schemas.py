@@ -79,3 +79,19 @@ class ReferralOpportunityRead(BaseModel):
 
     class Config:
         from_attributes = True
+
+
+# ---------- Connection Create Schema ----------
+
+class ConnectionCreate(BaseModel):
+    name: str
+    company_guess: Optional[str] = None
+    source: str = "manual"
+
+
+# ---------- Referral Opportunity Create Schema ----------
+
+class ReferralOpportunityCreate(BaseModel):
+    job_id: int
+    connection_id: int
+    note: Optional[str] = None

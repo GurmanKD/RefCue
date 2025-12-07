@@ -3,6 +3,10 @@ from fastapi import FastAPI
 from .database import Base, engine
 from .routers import jobs as jobs_router
 
+from .routers import connections as connections_router
+from .routers import referrals as referrals_router
+
+
 app = FastAPI(
     title="RefCue – Referral Opportunity Tracker",
     version="0.1.0",
@@ -26,3 +30,7 @@ def health_check() -> dict:
 
 # Routers
 app.include_router(jobs_router.router)
+
+app.include_router(connections_router.router)
+app.include_router(referrals_router.router)
+
