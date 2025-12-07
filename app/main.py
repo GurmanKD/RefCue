@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 
 from .database import Base, engine
+from .routers import jobs as jobs_router
 
 app = FastAPI(
     title="RefCue – Referral Opportunity Tracker",
@@ -21,3 +22,7 @@ def on_startup() -> None:
 @app.get("/health", tags=["health"])
 def health_check() -> dict:
     return {"status": "ok", "service": "refcue"}
+
+
+# Routers
+app.include_router(jobs_router.router)
