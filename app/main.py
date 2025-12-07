@@ -5,6 +5,7 @@ from .routers import jobs as jobs_router
 
 from .routers import connections as connections_router
 from .routers import referrals as referrals_router
+from .routers import gmail_sync as gmail_sync_router
 
 
 app = FastAPI(
@@ -33,4 +34,7 @@ app.include_router(jobs_router.router)
 
 app.include_router(connections_router.router)
 app.include_router(referrals_router.router)
+
+app.include_router(gmail_sync_router.router)
+
 
